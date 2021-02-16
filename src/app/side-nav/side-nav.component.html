@@ -1,0 +1,141 @@
+<mat-sidenav-container class="example-container" >
+  <mat-sidenav #sidenav mode="over" [(opened)]="opened">
+    
+    <!-- Added by Mari 14-02-2021 left menu accordian start -->
+	<mat-accordion class="example-headers-align">
+	  <mat-expansion-panel>
+	    <mat-expansion-panel-header>
+	      <mat-panel-title>
+	        Display Racks
+	      </mat-panel-title>
+	      <!-- <mat-panel-description>
+	        Type your name and age
+	        <mat-icon>account_circle</mat-icon>
+	      </mat-panel-description> -->
+	    </mat-expansion-panel-header>
+
+	    <mat-list>
+			<mat-list-item>Display Rack 1</mat-list-item>
+			<mat-divider></mat-divider>
+			<mat-list-item>Display Rack 2</mat-list-item>
+			<mat-divider></mat-divider>
+			<mat-list-item>Display Rack 3</mat-list-item>
+		</mat-list>
+
+	  </mat-expansion-panel>
+	  <mat-expansion-panel>
+	    <mat-expansion-panel-header>
+	      <mat-panel-title>
+	        Vegetable & Fruits Racks
+	      </mat-panel-title>
+	    </mat-expansion-panel-header>
+
+	    <mat-list>
+			<mat-list-item>Vegetable & Fruits Rack 1</mat-list-item>
+			<mat-divider></mat-divider>
+			<mat-list-item>Vegetable & Fruits Rack 2</mat-list-item>
+			<mat-divider></mat-divider>
+			<mat-list-item>Vegetable & Fruits Rack 3</mat-list-item>
+		</mat-list>
+
+	  </mat-expansion-panel>
+	  <mat-expansion-panel>
+	    <mat-expansion-panel-header>
+	      <mat-panel-title>
+	        Departmental Store Racks
+	      </mat-panel-title>
+	    </mat-expansion-panel-header>
+
+	    <mat-list>
+			<mat-list-item>Departmental Store Rack 1</mat-list-item>
+			<mat-divider></mat-divider>
+			<mat-list-item>Departmental Store Rack 2</mat-list-item>
+		</mat-list>
+
+	  </mat-expansion-panel>
+	  <mat-expansion-panel>
+	    <mat-expansion-panel-header>
+	      <mat-panel-title>
+	        Supermarket Racks
+	      </mat-panel-title>
+	    </mat-expansion-panel-header>
+
+	    <mat-list>
+			<mat-list-item>Supermarket Rack 1</mat-list-item>
+			<mat-divider></mat-divider>
+			<mat-list-item>Supermarket Rack 2</mat-list-item>			
+			<mat-divider></mat-divider>
+			<mat-list-item>Supermarket Rack 3</mat-list-item>
+		</mat-list>
+
+	  </mat-expansion-panel>
+	  <mat-expansion-panel>
+	    <mat-expansion-panel-header>
+	      <mat-panel-title>
+	        Center Racks
+	      </mat-panel-title>
+	    </mat-expansion-panel-header>
+
+	    <mat-list>
+			<mat-list-item>Center Rack 1</mat-list-item>
+			<mat-divider></mat-divider>
+			<mat-list-item>Center Rack 2</mat-list-item>			
+			<mat-divider></mat-divider>
+			<mat-list-item>Center Rack 3</mat-list-item>
+		</mat-list>
+
+	  </mat-expansion-panel>
+	  <mat-expansion-panel>
+	    <mat-expansion-panel-header>
+	      <mat-panel-title>
+	        Textile Racks
+	      </mat-panel-title>
+	    </mat-expansion-panel-header>
+
+	    <mat-list>
+			<mat-list-item>Textile Rack 1</mat-list-item>
+			<mat-divider></mat-divider>
+			<mat-list-item>Textile Rack 2</mat-list-item>			
+			<mat-divider></mat-divider>
+			<mat-list-item>Textile Rack 3</mat-list-item>
+		</mat-list>
+
+	  </mat-expansion-panel>
+	  <mat-expansion-panel>
+	    <mat-expansion-panel-header>
+	      <mat-panel-title>
+	        Wall Side Racks
+	      </mat-panel-title>
+	    </mat-expansion-panel-header>
+
+	    <mat-list>
+			<mat-list-item>Wall Side Rack 1</mat-list-item>
+			<mat-divider></mat-divider>
+			<mat-list-item>Wall Side Rack 2</mat-list-item>			
+			<mat-divider></mat-divider>
+			<mat-list-item>Wall Side Rack 3</mat-list-item>
+		</mat-list>
+
+	  </mat-expansion-panel>
+
+	</mat-accordion>
+
+	<!-- Added by Mari 14-02-2021 left menu accordian end -->
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+   	<app-header></app-header>
+
+   	<p *ngIf="commService.current_page == 'home'">
+   		Home Content Displays here
+   	</p>
+
+   	
+   	<app-product-content *ngIf="commService.current_page == 'product-display'"></app-product-content>
+   	
+
+	<app-footer></app-footer>	
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

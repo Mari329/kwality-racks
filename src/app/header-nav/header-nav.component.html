@@ -1,0 +1,106 @@
+<p>
+  <mat-toolbar color="warn">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="menu_click()" >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Kwality Racks</span>
+
+    <!-- First menu start -->
+    <button mat-button (click)="redirect('home')">Home</button>
+    <!-- First menu end -->
+
+    <!-- Second menu start -->
+    <button mat-button [matMenuTriggerFor]="products">Products</button>
+    <mat-menu #products="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="display_racks">Display Racks</button>
+      <button mat-menu-item [matMenuTriggerFor]="vegetable_fruits_racks">Vegetable & Fruits Racks</button>
+      <button mat-menu-item [matMenuTriggerFor]="departmental_store_racks">Departmental Store Racks</button>
+      <button mat-menu-item [matMenuTriggerFor]="supermarket_racks">Supermarket Racks</button>
+      <button mat-menu-item [matMenuTriggerFor]="center_racks">Center Racks</button>
+      <button mat-menu-item [matMenuTriggerFor]="textile_racks">Textile Racks</button>
+      <button mat-menu-item [matMenuTriggerFor]="wall_side_racks">Wall Side Racks</button>
+    </mat-menu>
+
+    <mat-menu #display_racks="matMenu">
+      <button mat-menu-item (click)="redirect('product-display')">Display Rack 1</button>
+      <button mat-menu-item>Display Rack 1</button>
+      <button mat-menu-item>Display Rack 3</button>
+    </mat-menu>
+
+    <mat-menu #vegetable_fruits_racks="matMenu">
+      <button mat-menu-item>Vegetable & Fruits Rack 1</button>
+      <button mat-menu-item>Vegetable & Fruits Rack 1</button>
+      <button mat-menu-item>Vegetable & Fruits Rack 3</button>
+    </mat-menu>
+
+    <mat-menu #departmental_store_racks="matMenu">
+      <button mat-menu-item>Departmental Store Rack 1</button>
+      <button mat-menu-item>Departmental Store Rack 1</button>
+      <button mat-menu-item>Departmental Store Rack 3</button>
+    </mat-menu>
+
+    <mat-menu #supermarket_racks="matMenu">
+      <button mat-menu-item>Supermarket Rack 1</button>
+      <button mat-menu-item>Supermarket Rack 1</button>
+      <button mat-menu-item>Supermarket Rack 3</button>
+    </mat-menu>
+
+    <mat-menu #center_racks="matMenu">
+      <button mat-menu-item>Center Rack 1</button>
+      <button mat-menu-item>Center Rack 1</button>
+      <button mat-menu-item>Center Rack 3</button>
+    </mat-menu>
+
+    <mat-menu #textile_racks="matMenu">
+      <button mat-menu-item>Textile Rack 1</button>
+      <button mat-menu-item>Textile Rack 1</button>
+      <button mat-menu-item>Textile Rack 3</button>
+    </mat-menu>
+
+    <mat-menu #wall_side_racks="matMenu">
+      <button mat-menu-item>Wall Side Rack 1</button>
+      <button mat-menu-item>Wall Side Rack 1</button>
+      <button mat-menu-item>Wall Side Rack 3</button>
+    </mat-menu>
+    <!-- Seceond menu end -->
+
+    <!-- Third menu start --> 
+    <button mat-button>About Us</button>
+    <!-- Third menu end -->
+
+    <!-- Fourth menu start -->  
+    <button mat-button>Contact Us</button>
+    <!-- Fourth menu end -->
+
+    <span class="example-spacer"></span>
+    
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Number</mat-label>
+        <input type="text"
+               placeholder="Pick one"
+               aria-label="Number"
+               matInput
+               [formControl]="myControl"
+               [matAutocomplete]="auto">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+
+    
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
+
+
+
+
