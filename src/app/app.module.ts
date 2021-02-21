@@ -14,7 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule} from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon'
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -24,6 +24,9 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { ProductContentComponent } from './product-content/product-content.component';
+import { MatTableModule } from '@angular/material/table';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
+
 
 
 
@@ -54,7 +57,9 @@ import { ProductContentComponent } from './product-content/product-content.compo
     MatInputModule,
     MatDividerModule,
     MatListModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatTableModule,
+    NgxImageZoomModule
   ],
   providers: [],
   bootstrap: [AppComponent]
